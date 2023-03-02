@@ -1,0 +1,17 @@
+<%# app/views/layouts/index.html.erb %>
+
+<div class="container mt-5">
+  <h1>Our beautiful flats! 🏠</h1>
+
+  <%# <%= @flats.for_each do | |  %>
+  <ul>
+    <% @flats.each do |flat| %>
+    <div class="card">
+      <h3>"<%= flat["name"] %>"</h3>
+      <h3><%= flat["price"] %> $</h3>
+      <img src="<%= flat["imageUrl"] %>" alt="" width="40%">
+      </div>
+    <% end %>
+  </ul>
+  <%= link_to "Bring me to this specific flat!", flat_path %>
+</div>
